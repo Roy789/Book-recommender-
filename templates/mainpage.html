@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<title>Home page</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="static/css/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Karma">
+<style>
+body,h1,h2,h3,h4,h5,h6 {font-family: "Karma", sans-serif}
+.w3-bar-block .w3-bar-item {padding:20px}
+.topnav {
+  overflow: hidden; 
+  }
+     .topnav {
+      overflow: hidden; 
+      font-family: "-apple-system", sans-serif;
+      height: 50px;
+      padding-top: 7px;
+    }
+
+    .topnav a {
+
+      float: left;
+      color: #007bff;
+      text-align: center;
+      padding: 11px;
+      text-decoration: none;
+      height: 40px;
+      font-size: 15px;
+    }
+
+    .topnav a.active {
+      background-color: #007bff;
+      color: white;
+      -webkit-border-radius: 8px;-moz-border-radius: 8px;
+    }
+
+    </style>
+    <body>
+
+    <!-- Top menu -->
+    
+      <div class="topnav">
+        <a class="active" href="http://127.0.0.1:8001/home">HOME</a>
+        <a href="http://127.0.0.1:8001/collections/">COLLECTIONS</a>
+        <a href="http://127.0.0.1:8001/explore/">EXPLORE</a>
+        <a href="http://127.0.0.1:8001/account" >ACCOUNT</a>
+      </div>   
+<div class="w3-center w3-padding-16" style="font-size: 20px;color: black"><b>MY BOOKS</b></div>
+  
+<!-- !PAGE CONTENT! -->
+<div class="w3-main w3-content w3-padding" style="max-width:1200px;margin-top:100px">
+
+  <!-- First Photo Grid-->
+  <div class="w3-row-padding w3-padding-16 w3-center" id="grid1">
+    {% for i in books[0:4] %}
+        <div class="w3-quarter">
+          <img src={{i[7]}}  style="width:100%">
+          <a href = "{{'http://127.0.0.1:8001/book_display/'+i[0]|string}}">{{i[1]}}</a>
+          <p>{{i[2]}}</p>
+        </div>
+    {% endfor %}
+  </div>
+  <!-- Second Photo Grid-->
+  <div class="w3-row-padding w3-padding-16 w3-center" id="grid2">
+    {% for i in books[4:8] %}
+        <div class="w3-quarter">
+          <img src={{i[7]}}  style="width:100%">
+          <a href = "{{'http://127.0.0.1:8001/book_display/'+i[0]|string}}">{{i[1]}}</a>
+          <p>{{i[2]}}</p>
+        </div>
+    {% endfor %}
+  </div>
+    <!-- Third Photo Grid-->
+  <div class="w3-row-padding w3-padding-16 w3-center" id="grid3">
+    {% for i in books[8:12] %}
+        <div class="w3-quarter">
+          <img src={{i[7]}}  style="width:100%">
+          <a href = "{{'http://127.0.0.1:8001/book_display/'+i[0]|string}}">{{i[1]}}</a>
+          <p>{{i[2]}}</p>
+        </div>
+    {% endfor %}
+  </div>
+  
+<!-- End page content -->
+</div>
+
+</body>
+</html>
+

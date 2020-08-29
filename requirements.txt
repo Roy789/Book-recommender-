@@ -1,0 +1,8 @@
+flask == 1.1.2
+dash == 1.13.3
+dash-html-components == 1.0.3
+dash-core-components == 1.10.1
+werkzeug == 1.0.0
+dash-bootstrap-components == 0.10.3
+sklearn 
+pandas  

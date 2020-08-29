@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+<title>Account details</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="static/css/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Karma">
+	
+<style>
+body,h1,h2,h3,h4,h5,h6 {font-family: "Karma", sans-serif}
+.w3-bar-block .w3-bar-item {padding:20px}
+.topnav {
+  overflow: hidden; 
+}
+     .topnav {
+      overflow: hidden; 
+      font-family: "-apple-system", sans-serif;
+      height: 50px;
+      padding-top: 7px;
+    }
+    .topnav a {
+      float: left;
+      color: #007bff;
+      text-align: center;
+      padding: 11px;
+      text-decoration: none;
+      height: 40px;
+      font-size: 15px;
+    }
+
+    .topnav a.active {
+      background-color: #007bff;
+      color: white;
+      -webkit-border-radius: 8px;-moz-border-radius: 8px;
+    }
+
+    </style>
+    <body>
+
+    <!-- Top menu -->
+    
+     <div class="topnav">
+      <a href="http://127.0.0.1:8001/home">HOME</a>
+      <a href="http://127.0.0.1:8001/collections/">COLLECTIONS</a>
+      <a href="http://127.0.0.1:8001/explore/">EXPLORE</a>
+      <a class="active" href="http://127.0.0.1:8001/account" >ACCOUNT</a>
+    </div>   
+<div class="w3-center w3-padding-16" style="font-size: 20px;color: black"><b>MY ACCOUNT</b></div>
+  
+<!-- !PAGE CONTENT! -->
+
+<div class="w3-main w3-content" style="max-width:1500px;margin-top:50px; ">
+  <form action = "{{ url_for('account') }}" method = "POST">
+    <div class="bg" style="background-image: url('static/images/banner.jpg'); ">
+    
+	    <div class="box-container" style="text-align: center;display: block">    
+		    <div class="w3-box">
+		    	<p style="font-size: 21px; text-align:  center;"><b>ABOUT ME! </b></p>
+		      <p style="font-size: 18px"><b>Name: {{name}} </b></p>
+		      <p style="font-size: 18px; "><b>Interests: {{interests}} </b></p>
+		      <p style="font-size: 13px; ">You can add more genres to your interests here. </p>
+     			 <div class="Agenre-check">
+                    <label for="biography">Biography</label>
+                    <input class="genre-check"type="checkbox" id="biography" name="genre" value = "biography">
+                    
+                    <label for="horror">Horror</label>
+                    <input class="genre-check" type="checkbox" id="horror" name="genre" value = "horror" >
+
+                    <label for="romance">Romance</label>
+                    <input class="genre-check" type="checkbox" id="romance" name="genre" value = "romance">
+
+                    <label for="thriller">Thriller</label>
+                    <input class="genre-check"type="checkbox" id="thriller" name="genre" value ="thriller">
+
+                    <label for="fantasy">Fantasy</label>
+                    <input class="genre-check" type="checkbox" id="fantasy" name="genre" value ="fantasy"> 
+
+                    <label for="comics">Comics</label>
+                    <input class="genre-check" type="checkbox" id="comics" name="genre" value ="comedy">
+
+                    <label for="Philosophy">Philosophy</label>
+                    <input class="genre-check" type="checkbox" id="Philosophy" name="genre" value ="philosophy">  
+
+                    <label for="crime">Crime</label>
+                    <input class="genre-check" type="checkbox" id="crime" name="genre" value ="crime"> 
+
+
+                    <label for="poetry">Poetry</label>
+                    <input class="genre-check"type="checkbox" id="poetry" name="genre" value ="poetry">
+
+                    <label for="My">Mystery</label>
+                    <input class="genre-check" type="checkbox" id="My" name="genre" value ="mystery">   
+
+                    <label for="children">Children</label>
+                    <input class="genre-check" type="checkbox" id="children" name="genre" value ="children">  
+            
+  		
+				</div>
+			<button style="background-color: #4CAF50; border: none; color: white;font-family: sans-serif; font-size: 12px;margin-top: 10px; width: 60px" >ADD</button>
+
+     		</div>
+ 		 </div>
+ 	  </div>
+ 	 </form>     
+  	</div>
+</body>
+</html>
+
